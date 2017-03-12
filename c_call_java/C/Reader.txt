@@ -1,0 +1,15 @@
+
+compile java:
+javac Hello.java
+javap -p -s Hello.class //get Signature
+
+
+
+compile c:
+gcc -I/usr/lib/jvm/java-1.7.0-openjdk-amd64/include/ -o Caller Caller.c -L /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server -ljvm
+
+
+
+ run:
+BRARY_PATH=/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/ ./Caller
+
